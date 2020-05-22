@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cartermoviesearch/static/css/main.36497136.chunk.css",
+    "main.js": "/cartermoviesearch/static/js/main.ad452606.chunk.js",
+    "main.js.map": "/cartermoviesearch/static/js/main.ad452606.chunk.js.map",
+    "runtime-main.js": "/cartermoviesearch/static/js/runtime-main.d5049e62.js",
+    "runtime-main.js.map": "/cartermoviesearch/static/js/runtime-main.d5049e62.js.map",
+    "static/css/2.0624914a.chunk.css": "/cartermoviesearch/static/css/2.0624914a.chunk.css",
+    "static/js/2.678ec9d6.chunk.js": "/cartermoviesearch/static/js/2.678ec9d6.chunk.js",
+    "static/js/2.678ec9d6.chunk.js.map": "/cartermoviesearch/static/js/2.678ec9d6.chunk.js.map",
+    "index.html": "/cartermoviesearch/index.html",
+    "precache-manifest.8b58d31572de7d1bdb6b5de82f8c3dff.js": "/cartermoviesearch/precache-manifest.8b58d31572de7d1bdb6b5de82f8c3dff.js",
+    "service-worker.js": "/cartermoviesearch/service-worker.js",
+    "static/css/2.0624914a.chunk.css.map": "/cartermoviesearch/static/css/2.0624914a.chunk.css.map",
+    "static/css/main.36497136.chunk.css.map": "/cartermoviesearch/static/css/main.36497136.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5049e62.js",
+    "static/css/2.0624914a.chunk.css",
+    "static/js/2.678ec9d6.chunk.js",
+    "static/css/main.36497136.chunk.css",
+    "static/js/main.ad452606.chunk.js"
+  ]
+}

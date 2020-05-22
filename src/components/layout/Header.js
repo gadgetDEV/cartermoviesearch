@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
-const Header = props => {
+const Header = (props) => {
   const { branding } = props;
   return (
     <nav
@@ -38,11 +38,11 @@ const Header = props => {
 };
 
 Header.defaultProps = {
-  branding: "CarterMovie App"
+  branding: "CarterMovie App",
 };
 
 Header.propTypes = {
-  branding: PropTypes.string.isRequired
+  branding: PropTypes.string.isRequired,
 };
 
 export default Header;

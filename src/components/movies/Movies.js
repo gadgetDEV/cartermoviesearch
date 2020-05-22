@@ -35,7 +35,7 @@ class Movies extends Component {
                 <i
                   onClick={() =>
                     this.setState({
-                      showMoviesInfo: !this.state.showMoviesInfo
+                      showMoviesInfo: this.state.showMoviesInfo
                     })
                   }
                   className="fas fa-sort-down"

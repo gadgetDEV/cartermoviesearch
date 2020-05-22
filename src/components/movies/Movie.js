@@ -6,16 +6,15 @@ class Movie extends Component {
   render() {
     return (
       <Consumer>
-        {value => {
+        {(value) => {
           const { movie } = value;
           return (
             <React.Fragment>
               <h1 className="display-4 mb-2">
-                <span className="text-danger">Movie</span>
-                List
+                <span className="text-danger">Movie List</span>
               </h1>
-              {movie.map(movies => (
-                <Movies key={movie.id} movies={movies} />
+              {movie.map((movies) => (
+                <Movies key={movies.id} movies={movies} />
               ))}
             </React.Fragment>
           );
