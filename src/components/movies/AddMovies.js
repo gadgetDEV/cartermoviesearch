@@ -8,7 +8,7 @@ class AddMovies extends Component {
     name: "",
     film: "",
     year: "",
-    errors: {}
+    errors: {},
   };
 
   onSubmit = async (dispatch, e) => {
@@ -22,46 +22,46 @@ class AddMovies extends Component {
     }
 
     if (film === "") {
-      this.setState({ errors: { film: "film is required (optional)" } });
+      this.setState({ errors: { film: "film is required" } });
       return;
     }
 
     if (year === "") {
-      this.setState({ errors: { year: "year is required (optional)" } });
+      this.setState({ errors: { year: "year is required" } });
       return;
     }
 
     const newMovie = {
       name,
       film,
-      year
+      year,
     };
 
     const res = await axios.post(
-      `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=42cedafc2686fc5395ac07cecad44063`,
+      `https://api.themoviedb.org/3/movie/{movie_id}/rating?api_key=42cedafc2686fc5395ac07cecad44063`,
       newMovie
     );
 
-    dispatchEvent({ type: "ADD_MOVIES", payload: res.data });
+    dispatchEvent({ type: "ADD_MOVIES", payload: res.data.results });
 
     this.setState({
       name: "",
       film: "",
       year: "",
-      error: {}
+      error: {},
     });
 
     this.props.history.push("/");
   };
 
-  onChange = e => this.setState({ [e.target.name]: e.target.value });
+  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const { name, film, year, errors } = this.state;
 
     return (
       <Consumer>
-        {value => {
+        {(value) => {
           const { dispatch } = value;
           return (
             <div className="card mb-3">

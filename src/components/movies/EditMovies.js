@@ -14,10 +14,10 @@ class EditMovies extends Component {
   async componentDidMount() {
     const { id } = this.props.match.params;
     const res = await axios.get(
-      `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=42cedafc2686fc5395ac07cecad44063/${id}`
+      `https://api.themoviedb.org/3/movie/top_rated?api_key=42cedafc2686fc5395ac07cecad44063&language=en-US&page=1${id}`
     );
 
-    const movies = res.data;
+    const movies = res.data.results;
 
     this.setState({
       name: movies.name,

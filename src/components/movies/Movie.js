@@ -11,7 +11,7 @@ class Movie extends Component {
           return (
             <React.Fragment>
               <h1 className="display-4 mb-2">
-                <span className="text-danger">Movie List</span>
+                <span className="text-danger">Favourite Movies</span>
               </h1>
               {movie.map((movies) => (
                 <Movies key={movies.id} movies={movies} />
