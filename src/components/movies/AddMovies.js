@@ -80,7 +80,7 @@ class AddMovies extends Component {
                     label="Film"
                     name="film"
                     type="film"
-                    placeholder="Enter Film (optional)"
+                    placeholder="Enter Film Category"
                     value={film}
                     onChange={this.onChange}
                     error={errors.film}
@@ -88,7 +88,7 @@ class AddMovies extends Component {
                   <TextInputGroup
                     label="Year"
                     name="year"
-                    placeholder="Enter year (optional)"
+                    placeholder="Enter year"
                     value={year}
                     onChange={this.onChange}
                     error={errors.year}

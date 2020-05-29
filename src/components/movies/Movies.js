@@ -6,7 +6,7 @@ import axios from "axios";
 
 class Movies extends Component {
   state = {
-    showMoviesInfo: false
+    showMoviesInfo: false,
   };
 
   onDeleteClick = async (id, dispatch) => {
@@ -14,9 +14,9 @@ class Movies extends Component {
       await axios.delete(
         `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=42cedafc2686fc5395ac07cecad44063/${id}`
       );
-      dispatch({ type: "DELETE_CONTACT", payload: id });
+      dispatch({ type: "DELETE_MOVIES", payload: id });
     } catch (e) {
-      dispatch({ type: "DELETE_CONTACT", payload: id });
+      dispatch({ type: "DELETE_MOVIES", payload: id });
     }
   };
 
@@ -26,7 +26,7 @@ class Movies extends Component {
 
     return (
       <Consumer>
-        {value => {
+        {(value) => {
           const { dispatch } = value;
           return (
             <div className="card card-body mb-3">
@@ -35,7 +35,7 @@ class Movies extends Component {
                 <i
                   onClick={() =>
                     this.setState({
-                      showMoviesInfo: this.state.showMoviesInfo
+                      showMoviesInfo: !this.state.showMoviesInfo,
                     })
                   }
                   className="fas fa-sort-down"
@@ -53,7 +53,7 @@ class Movies extends Component {
                       cursor: "pointer",
                       float: "right",
                       color: "yellow",
-                      marginRight: "1rem"
+                      marginRight: "1rem",
                     }}
                   />
                 </Link>
@@ -74,7 +74,7 @@ class Movies extends Component {
 }
 
 Movies.propTypes = {
-  movies: PropTypes.object.isRequired
+  movies: PropTypes.object.isRequired,
 };
 
 export default Movies;

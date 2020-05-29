@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/cartermoviesearch/precache-manifest.8b58d31572de7d1bdb6b5de82f8c3dff.js"
+  "/cartermoviesearch/precache-manifest.87cf181261b8f58d81fe4f171ebf4176.js"
 );
 
 self.addEventListener('message', (event) => {

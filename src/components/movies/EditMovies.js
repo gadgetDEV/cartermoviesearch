@@ -37,12 +37,12 @@ class EditMovies extends Component {
     }
 
     if (film === "") {
-      this.setState({ errors: { film: "Film is required (optional)" } });
+      this.setState({ errors: { film: "Film is required" } });
       return;
     }
 
     if (year === "") {
-      this.setState({ errors: { year: "Year is required (optional)" } });
+      this.setState({ errors: { year: "Year is required" } });
       return;
     }
 
@@ -88,7 +88,7 @@ class EditMovies extends Component {
                   <TextInputGroup
                     label="Name"
                     name="name"
-                    placeholder="Enter Name"
+                    placeholder="Enter Movie Name"
                     value={name}
                     onChange={this.onChange}
                     error={errors.name}
@@ -97,7 +97,7 @@ class EditMovies extends Component {
                     label="Film"
                     name="film"
                     type="film"
-                    placeholder="Enter Film"
+                    placeholder="Enter Film Category"
                     value={film}
                     onChange={this.onChange}
                     error={errors.film}

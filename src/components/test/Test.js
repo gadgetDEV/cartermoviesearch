@@ -3,18 +3,18 @@ import React, { Component } from "react";
 class Test extends Component {
   state = {
     test: "",
-    body: ""
+    body: "",
   };
 
   componentDidMount() {
     fetch(
       `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=42cedafc2686fc5395ac07cecad44063`
     )
-      .then(response => response.motionpicture())
-      .then(data =>
+      .then((response) => response.themoviedb())
+      .then((data) =>
         this.setState({
           title: data.title,
-          body: data.body
+          body: data.body,
         })
       );
   }
@@ -39,7 +39,7 @@ class Test extends Component {
   //return {
   //test: "something";
   //};
-  //} 
+  //}
 
   //getSnapshotBeforeUpdate(prevProps, prevState) {
   //console.log("getSnapshotBeforeUpdate...");
